@@ -1,0 +1,19 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/anjalichourasia/ReactJS.git"
+  },
+  "author": "Anjali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anjalichourasia/ReactJS/issues"
+  },
+  "homepage": "https://github.com/anjalichourasia/ReactJS#readme",
+  "description": ""
+}
