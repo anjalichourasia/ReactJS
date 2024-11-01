@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
     <div id="root">
@@ -12,20 +13,9 @@
         <h2> head 3</h2>
     </div>
     <div id="footer"></div>
-</body>
+
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script>
-
-    const heading = React.createElement("h1", {}, "Namaste EveryOne!");
-    const heading1 = React.createElement("h1", 
-    {
-        id: "title"
-    }, "Namaste EveryOne heading!");
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    const footer = ReactDOM.createRoot(document.getElementById("footer"));
-    root.render(heading);
-    footer.render(heading1);
-</script>
-    
+<script src="App.js"></script>
+</body>   
 </html>
