@@ -7,15 +7,18 @@
 </head>
 <body>
     <div id="root"></div>
+    <div id="footer"></div>
 </body>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script>
 
     const heading = React.createElement("h1", {}, "Namaste EveryOne!");
+    const heading1 = React.createElement("h1", {}, "Namaste EveryOne heading!");
     const root = ReactDOM.createRoot(document.getElementById("root"));
-
+    const footer = ReactDOM.createRoot(document.getElementById("footer"));
     root.render(heading);
+    footer.render(heading1);
 </script>
     
 </html>
