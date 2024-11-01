@@ -15,5 +15,8 @@
     "url": "https://github.com/anjalichourasia/ReactJS/issues"
   },
   "homepage": "https://github.com/anjalichourasia/ReactJS#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
 }
