@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
 const heading = React.createElement("h1", {}, "Namaste EveryOne!");
     const heading1 = React.createElement("h1", 
     {
