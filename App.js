@@ -14,17 +14,24 @@ const HeaderComponent = () => {
                     <li>About</li>
                     <li>Contact</li>
                     <li>Cart</li>
-
                  </ul>
             </div>
         </div>
     )
 }
 
-const RestrauntCard = () => {
+
+const RestrauntCard = (props) => { 
     return(
-        <div className="res-card">
-            <h3> Meghana Foods</h3>
+        <div className="res-card" style={{backgroundColor: "#f0f0f0"}}>
+            <img 
+                className="res-logo"
+                alt="res-logo" 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF8dyDK5OTm9Xy-WxnXzjGCnxU-GVTtDPnjQ&s" 
+            />
+            <h3> {props.resName} </h3>
+            <h4> {props.cuisine} </h4>
+            <h5> {}</h5>
         </div>
     )
 }
@@ -34,6 +41,22 @@ const BodyComponent = () => {
         <div className="body">
             <div className="search">Search</div>
             <div className="restraunt-container">
+                <RestrauntCard 
+                    resName="Meghna Food" 
+                    cuisine="Biryani, north indian"
+                    rating="Rating 4.4"
+                />
+                <RestrauntCard 
+                    resName="Punjabi Swag" 
+                    cuisine="Punjabi, north east"
+                />
+                <RestrauntCard />
+                <RestrauntCard />
+                <RestrauntCard />
+                <RestrauntCard />
+                <RestrauntCard />
+                <RestrauntCard />
+                <RestrauntCard />
                 <RestrauntCard />
             </div>
         </div>
