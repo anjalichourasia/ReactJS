@@ -1,26 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-// React functional component 
-//js function - it return jsx code or react element
-const HeaderComponent = () => {
-    return(
-        <div className="header">
-            <div className="logo-container">
-                <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6DfnC1vvuLfVs7nnTZY-C3XgsQozpbzuMYw&s" />
-            </div>
-            <div className="nav-items">
-                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                 </ul>
-            </div>
-        </div>
-    )
-}
-
-var resObj = [
+const resObj = [
     {
         "card": {
             "card": {
@@ -641,85 +619,6 @@ var resObj = [
             }
         }
     },
-]
+];
 
-const RestrauntCard = (props) => { 
-
-    console.log(props.resData?.card?.card?.info)
-    const {
-        avgRating,
-        cuisines,
-        name,
-    } = props.resData?.card?.card?.info;
-    return(
-        <div className="res-card" style={{backgroundColor: "#f0f0f0"}}>
-            <img 
-                className="res-logo"
-                alt="res-logo" 
-                src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${props.resData?.card?.card?.info?.cloudinaryImageId}` }
-            />
-            <h3> {name} </h3>
-            <h4> {cuisines.join(",")} </h4>
-            <h5> {avgRating}</h5>
-        </div>
-    )
-}
-
-const BodyComponent = () => {
-    return(
-        <div className="body">
-            <div className="search">Search</div>
-            <div className="restraunt-container">
-                {
-                    resObj.map(restraunt => <RestrauntCard 
-                        resData = {restraunt}
-                    />)
-                }
-                <RestrauntCard 
-                    resData = {resObj[0]}
-                />
-            </div>
-        </div>
-    )
-}
-
-const AppLayout = () => {
-    return(
-        <div className="app">
-            <HeaderComponent />
-            <BodyComponent />
-            {
-        /**
-         * Header
-         *  - logo
-         *  - list Items
-         * body
-         *  - Search bar
-         *  - Restraunt List
-         *      - Restaunat Card
-         *          - Image
-         *          - Name
-         *          - rating
-         *          - Cusins
-         *  footer
-         *   - links
-         *   - copyright
-         */
-        }
-        </div>
-    )
-}
-// JSX - javascript syntax to create react element
-//React element
-const jsxElement = (
-    <h1>
-        namaste react using jsx
-    </h1>
-);
-
-// React.createElement => Object => HTML Element (render inside a dom it become html)
-const heading = React.createElement("h1", {}, "namaste");
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout/>);
+export default resObj;
