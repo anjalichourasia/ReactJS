@@ -4,7 +4,10 @@ import ReactDOM from "react-dom/client";
 //js function - it return jsx code or react element
 const HeaderComponent = () => {
     return(
-        <div>
+        <div className="header">
+            <div className="logo-container">
+                <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6DfnC1vvuLfVs7nnTZY-C3XgsQozpbzuMYw&s" />
+            </div>
             <div className="nav-items">
                  <ul>
                     <li>Home</li>
@@ -18,9 +21,31 @@ const HeaderComponent = () => {
     )
 }
 
+const RestrauntCard = () => {
+    return(
+        <div className="res-card">
+            <h3> Meghana Foods</h3>
+        </div>
+    )
+}
+
+const BodyComponent = () => {
+    return(
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="restraunt-container">
+                <RestrauntCard />
+            </div>
+        </div>
+    )
+}
+
 const AppLayout = () => {
     return(
-        {
+        <div className="app">
+            <HeaderComponent />
+            <BodyComponent />
+            {
         /**
          * Header
          *  - logo
@@ -38,6 +63,7 @@ const AppLayout = () => {
          *   - copyright
          */
         }
+        </div>
     )
 }
 // JSX - javascript syntax to create react element
@@ -53,4 +79,4 @@ const heading = React.createElement("h1", {}, "namaste");
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeaderComponent/>);
+root.render(<AppLayout/>);

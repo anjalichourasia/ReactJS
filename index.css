@@ -1,7 +1,45 @@
-#root {
+.header {
+    display: flex;
+    justify-content: space-between;
+    /*margin: 10px; */
+    border: 1px solid black;
+}
+
+.logo{
+    width: 100px;
+}
+
+.nav-items > ul {
+    display: flex;
+    list-style-type: none;
+    padding: 12px 10px;
+    font-size: 20px;
+}
+
+.nav-items > ul > li {
+    padding: 10px;
+}
+
+/* #root {
     background-color: red;
 }
 
 #footer {
     background-color: green;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.nav-items > ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-items > ul > li {
+    padding: 10px;
+}  */
