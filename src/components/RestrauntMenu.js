@@ -18,6 +18,7 @@ const RestrauntMenu = () => {
         const data = await fetch(MENU_URL+ resId +"&catalog_qa=undefined&query=Pizza&submitAction=ENTER")
         const json = await data.json();
         setResInfo(json?.data.cards);
+        console.log(json?.data?.cards[2]?.card?.card?.info?.name)
     }
 
     console.log(resInfo)

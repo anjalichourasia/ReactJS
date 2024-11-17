@@ -1,6 +1,7 @@
 import RestrauntCard from "./RestrauntCard";
 import resObj from "../utils/mockData";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Body = () => {
     const [restList, setRestList] = useState(resObj);
@@ -18,10 +19,12 @@ const Body = () => {
             </div>
             <div className="restraunt-container">
                 {
-                    restList.map(restraunt => <RestrauntCard 
+                    restList.map(restraunt => <Link to={`/restraunt/${restraunt.card?.card?.info?.id}`}>
+                    <RestrauntCard
                         key = {restraunt.card?.card?.info?.id}
                         resData = {restraunt}
-                    />)
+                    />
+                    </Link>)
                 }
                 <RestrauntCard 
                     resData = {restList[0]}
