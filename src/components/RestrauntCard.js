@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { CDN_URL } from "../utils/constant";
 
 const RestrauntCard = (props) => { 
+    useEffect(()=>{
+        console.log("Rest use Effect");
+    },[])
     const {
         avgRating,
         cuisines,

@@ -1,9 +1,12 @@
 import RestrauntCard from "./RestrauntCard";
 import resObj from "../utils/mockData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Body = () => {
     const [restList, setRestList] = useState(resObj);
+    useEffect(()=>{
+        console.log("Body use Effect");
+    },[])
 
     return(
         <div className="body">
